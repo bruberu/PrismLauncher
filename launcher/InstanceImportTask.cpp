@@ -269,7 +269,7 @@ bool installIcon(QString root, QString instIcon)
     if (importIconPath.isNull() || !QFile::exists(importIconPath))
         importIconPath = IconUtils::findBestIconIn(root, "icon.png");
     if (importIconPath.isNull() || !QFile::exists(importIconPath))
-        importIconPath = IconUtils::findBestIconIn(FS::PathCombine(root, "overrides"), "icon.png");
+        importIconPath = IconUtils::findBestIconIn(FS::PathCombine(root, "minecraft"), "icon.png");
     if (!importIconPath.isNull() && QFile::exists(importIconPath)) {
         // import icon
         auto iconList = APPLICATION->icons();
